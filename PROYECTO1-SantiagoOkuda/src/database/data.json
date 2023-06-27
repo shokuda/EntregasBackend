@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"modelo": "Dell PowerdEdge R710",
+		"hardware": "Dual Xeon 5650 512gb ram 4tb ssd",
+		"anio": "2009"
+	},
+	{
+		"id": 2,
+		"modelo": "Hp Proliant",
+		"hardware": "Dual Xeon 5670 1tb ram 4tb ssd",
+		"anio": "2010"
+	},
+	{
+		"id": 3,
+		"modelo": "Solaris PCI72473S",
+		"hardware": "Intel Core i7 512gb ram 2tb ssd",
+		"anio": "2020"
+	},
+	{
+		"id": 4,
+		"modelo": "IBM z16",
+		"hardware": "Dual i9 4tb ram 16tb ssd",
+		"anio": "2024"
+	},
+	{
+		"id": 5,
+		"modelo": "IBM z20",
+		"hardware": "Dual EPYC 9654 4tb ram 32tb ssd",
+		"anio": "2024"
+	}
+]
