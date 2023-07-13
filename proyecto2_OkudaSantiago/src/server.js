@@ -59,7 +59,7 @@ server.post('/servidores', async (req, res) => {
     }
     try {
         const coleccion = await connectCollection('servidores');
-        const servidor = { id: await generarID(coleccion), modelo, alias, hardware, inventario, anio};
+        const servidor = { id: await generarID(coleccion), modelo, alias, hardware, Number(inventario), Number(anio)};
         await coleccion.insertOne(servidor);
 
         res.status(200).send(JSON.stringify(servidor, null, '\t'));
