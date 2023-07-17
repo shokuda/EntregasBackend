@@ -59,7 +59,7 @@ server.post('/servidores', async (req, res) => {
     }
     try {
         const coleccion = await connectCollection('servidores');
-        const servidor = { id: await generarID(coleccion), modelo, alias, hardware, Number(inventario), Number(anio) };
+        const servidor = { id: await generarID(coleccion), modelo, alias, hardware, inventario: Number(inventario), anio: Number(anio) };
         await coleccion.insertOne(servidor);
 
         res.status(200).send(JSON.stringify(servidor, null, '\t'));
@@ -72,7 +72,7 @@ server.post('/servidores', async (req, res) => {
 server.put('/servidores/:id', async (req, res) => {
     const { id } = req.params;
     const { modelo, alias, hardware, inventario, anio } = req.body;
-    const servidor = { modelo, alias, hardware, Number(inventario), Number(anio) };
+    const servidor = { modelo, alias, hardware, inventario: Number(inventario), anio: Number(anio) };
     if (!modelo && !alias && !hardware && !inventario && !anio) {
         return res.status(400).send('Error, faltan datos del servidor');
     }
